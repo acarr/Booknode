@@ -8,6 +8,10 @@
     "email": "alex@alexcarr.me",
     "url": "alexcarr.me"
   },
+  "dependencies": {
+    "adm-zip": "0.1.x",
+    "underscore": "1.4.x"  
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/acarr/Booknode.git"
@@ -21,7 +25,7 @@
       "url": "https://github.com/acarr/Booknode/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/booknode",
+  "main": "app",
   "engines": {
     "node": ">= 0.6.0"
   },
