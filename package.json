@@ -12,7 +12,8 @@
     "adm-zip": "0.1.x",
     "underscore": "1.4.x",
     "express": "3.x.x",
-    "jquery": "1.7.x"
+    "jquery": "1.7.x",
+    "mustache": "0.7.x"
   },
   "repository": {
     "type": "git",
