@@ -129,3 +129,75 @@ header {
             color: #888;
             
             }
+            
+/* !Reader */
+
+.bn-reader-container {
+    
+    height: 100%;
+    overflow: hidden;
+    
+    }
+
+    .bn-toc {
+        
+        width: 21em;
+        overflow: auto;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #BBB;
+        
+        }
+        
+        .bn-toc ul {
+            
+            list-style: none;
+            margin: 0.5em 0;
+            padding-left: 2em;
+            
+            }
+        
+        .bn-toc > ul {
+            
+            padding: 1em;
+            
+            }
+            
+            .bn-toc li {
+                
+                margin-bottom: 0.4em;
+                
+                }
+            
+        .bn-toc a {
+            
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.4em;
+            text-decoration: none;
+            color: #333;
+            
+            }
+            
+            .bn-toc a:hover {
+                
+                text-decoration: underline;
+                
+                }
+        
+    .bn-reader {
+        
+        width: auto;
+        margin-left: 21em;
+        height: 100%;
+        background: #FFF;
+        
+        }
+        
+        .bn-reader iframe {
+            
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+            }

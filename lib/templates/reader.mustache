@@ -6,12 +6,12 @@
         <h1>{{book.title}} <span>by {{book.creator}}</span></h1>
     </header>
     
-    <div class="bn-container">
+    <div class="bn-container bn-reader-container clearfix">
         <div class="bn-toc">
             {{{toc}}}
         </div>
         <div class="bn-reader">
-        
+            <iframe src="{{pos}}" id="reader">
         </div>
     </div>
         
