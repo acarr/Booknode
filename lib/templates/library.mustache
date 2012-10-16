@@ -1,0 +1,32 @@
+{{> html }}
+
+<body>
+    
+    <header>
+        <h1>Booknode</h1>
+    </header>
+    
+    <div class="bn-container">
+    
+        {{#books}}
+        <ul class="bn-books-list">
+            {{#books}}
+                {{& .}}
+    		{{/books}}
+        </ul>
+        {{/books}}
+        
+        {{^books}}
+            <h2 class="bn-empty">Add a new book above or drag an ePub file here.</h2>
+        {{/books}}    
+
+    </div>
+    
+    <div id="bn-drop"></div>
+    
+    {{> scripts }}
+    <script src="assets/js/jq.filedrop.js"></script>
+    <script src="assets/js/bn.library.js"></script>
+    
+</body>
+</html>
