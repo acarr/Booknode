@@ -8,12 +8,14 @@
     
     <div class="bn-container">
     
-        <ul class="bn-books-list">
+        <ul class="bn-books-list clearfix">
             {{#books}}
                 <li>
-                    <img src="{{cover}}" alt="{{title}}">
-                    <h3>{{title}}</h3>
-                    <h4>{{creator}}</h4>
+                    <a href="read/{{file}}" target="_blank">
+                        <img src="books/{{cover}}" alt="{{title}}">
+                        <h3>{{title}}</h3>
+                        <h4>{{creator}}</h4>
+                    </a>
     		{{/books}}
         </ul>
         
