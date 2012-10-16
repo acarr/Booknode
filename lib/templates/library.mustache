@@ -8,13 +8,14 @@
     
     <div class="bn-container">
     
-        {{#books}}
         <ul class="bn-books-list">
             {{#books}}
-                {{& .}}
+                <li>
+                    <img src="{{cover}}" alt="{{title}}">
+                    <h3>{{title}}</h3>
+                    <h4>{{creator}}</h4>
     		{{/books}}
         </ul>
-        {{/books}}
         
         {{^books}}
             <h2 class="bn-empty">Add a new book above or drag an ePub file here.</h2>

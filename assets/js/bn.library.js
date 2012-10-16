@@ -11,6 +11,7 @@
            url : 'install',
            paramname : 'book',
            maxfilesize: 50,
+           maxfiles: 25,
            
            error : function(err, file) {
 
