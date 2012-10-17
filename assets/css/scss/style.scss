@@ -252,10 +252,11 @@ header {
     #bn-reader {
         
         position: absolute;
-        left: pem(336);
+        left: pem(337);
         right: 0;
         height: 100%;
         overflow: auto;
+        background: #FFF;
         
         #reader {
             
@@ -265,7 +266,6 @@ header {
             overflow: hidden;
             background: #FFF;
             padding: pem(40);
-            border: 1px solid #9e9e9e;
             margin: pem(40) auto;
             
         }   
