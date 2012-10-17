@@ -117,6 +117,11 @@ header {
         
         background: $bn-green;
     
+        .bn-books-list {
+            
+            display: none;
+        }
+    
         #bn-empty {
             
             display: block;
@@ -142,133 +147,127 @@ header {
         }
     }
     
-}
     
-/*
-.bn-books-list {
+    /* !Book Listings */
     
-    list-style: none;
-    padding: 0;
-    
-    }
-    
-.bn-books-list li {
-    
-    width: 14em;
-    text-align: center;
-    float: left;
-    margin: 1.4em;
-    
-    }
-    
-    .bn-books-list a {
+    .bn-books-list {
         
-        text-decoration: none;
+        list-style: none;
+        padding: 0;
         
+        li {
+            
+            width: pem(224);
+            float: left;
+            margin: pem(22);
+            
+            text-align: center;
+            
+            a {
+                
+                display: block;
+                text-decoration: none;
+                
+                img {
+                    
+                    width: 80%;
+                    box-shadow: 0 2px 10px #AAA;
+                    -webkit-transition: all .11s ease-in-out;
+                    -webkit-backface-visibility: hidden;
+                    
+                    &:hover {
+            
+                        -webkit-transform: scale(1.03);
+                    }
+                }
+                
+                h3 {
+                    
+                    font-size: pem(14);
+                    line-height: pem(18, 14);
+                    color: #333;
+                    -webkit-font-smoothing: antialiased;
+                    
+                    margin-bottom: 0;
+                }
+                
+                h4 {
+                    
+                    font-weight: normal;
+                    font-size: pem(14);
+                    color: #888;
+                    -webkit-font-smoothing: antialiased;
+                
+                    margin-top: 0;
+                }
+            }
         }
-    
-    .bn-books-list img {
-        
-        width: 80%;
-        box-shadow: 0 2px 10px #AAA;
-        -webkit-transition: all .11s ease-in-out;
-        -webkit-backface-visibility: hidden;
-        
-        }
-        
-        .bn-books-list img:hover {
-            
-            -webkit-transform: scale(1.03);
-            
-            }
-
-        .bn-books-list h3 {
-            
-            font-size: 0.9em;
-            line-height: 1.2em;
-            margin-bottom: 0.5em;
-            color: #333;
-            
-            }
-            
-        .bn-books-list h4 {
-            
-            margin-top: 0;
-            font-weight: normal;
-            font-size: 0.8em;
-            color: #888;
-            
-            }
-            
-/* !Reader 
-
-.bn-reader-container {
-    
-    height: 100%;
-    overflow: hidden;
-    
     }
+    
+    
+    /* !Reader */
+    
+    #bn-toc {
 
-    .bn-toc {
-        
-        width: 21em;
+        position: absolute;        
+        width: pem(336);
         overflow: auto;
         height: 100%;
-        float: left;
+        top: 0;
+
         border-right: 1px solid #BBB;
-        
-        }
-        
-        .bn-toc ul {
+                
+        ul {
             
             list-style: none;
             margin: 0.5em 0;
             padding-left: 2em;
             
-            }
-        
-        .bn-toc > ul {
-            
-            padding: 1em;
-            
-            }
-            
-            .bn-toc li {
+            li {
                 
                 margin-bottom: 0.4em;
                 
+                a {
+                    
+                    display: block;
+                    font-size: 0.75em;
+                    line-height: 1.4em;
+                    text-decoration: none;
+                    color: #333;
+                    
+                    &:hover {
+                        
+                        text-decoration: underline;
+                    }
                 }
-            
-        .bn-toc a {
-            
-            display: block;
-            font-size: 0.75em;
-            line-height: 1.4em;
-            text-decoration: none;
-            color: #333;
-            
             }
-            
-            .bn-toc a:hover {
-                
-                text-decoration: underline;
-                
-                }
-        
-    .bn-reader {
-        
-        width: auto;
-        margin-left: 21em;
-        height: 100%;
-        background: #FFF;
-        
         }
         
-        .bn-reader iframe {
+        & > ul {
             
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            padding: 1em; 
+        }
+    }
+    
+    #bn-reader {
+        
+        position: absolute;
+        left: pem(336);
+        right: 0;
+        height: 100%;
+        overflow: auto;
+        
+        #reader {
             
-            }
-*/
+            display: block;
+            width: 75%;
+            border: none;
+            overflow: hidden;
+            background: #FFF;
+            padding: pem(40);
+            border: 1px solid #9e9e9e;
+            margin: pem(40) auto;
+            
+        }   
+    }    
+}

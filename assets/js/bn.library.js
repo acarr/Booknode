@@ -8,7 +8,7 @@
             $uploading = $('#bn-progress'),
             $progress = $('progress', $uploading);
         
-        $body.filedrop({
+        $container.filedrop({
            
            url : 'install',
            paramname : 'book',

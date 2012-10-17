@@ -6,16 +6,17 @@
         <h1>{{book.title}} <span>by {{book.creator}}</span></h1>
     </header>
     
-    <div class="bn-container bn-reader-container clearfix">
-        <div class="bn-toc">
+    <div id="bn-container" class="clearfix">
+        <div id="bn-toc">
             {{{toc}}}
         </div>
-        <div class="bn-reader">
-            <iframe src="{{pos}}" id="reader">
+        <div id="bn-reader">
+            <iframe src="{{pos}}" id="reader"></iframe>
         </div>
     </div>
-        
+                
     {{> scripts }}
+    <script src="/assets/js/bn.reader.js"></script>
     
 </body>
 </html>
