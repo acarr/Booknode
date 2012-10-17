@@ -6,7 +6,7 @@
         <h1>Booknode</h1>
     </header>
     
-    <div class="bn-container">
+    <div id="bn-container">
     
         <ul class="bn-books-list clearfix">
             {{#books}}
@@ -24,9 +24,7 @@
         {{/books}}    
 
     </div>
-    
-    <div id="bn-drop"></div>
-    
+        
     {{> scripts }}
     <script src="assets/js/jq.filedrop.js"></script>
     <script src="assets/js/bn.library.js"></script>

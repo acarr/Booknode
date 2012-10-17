@@ -4,7 +4,7 @@
     $(document).ready(function(){
         
         var $body = $('body'),
-            $overlay = $('#bn-drop');
+            $container = $('#bn-container');
         
         $body.filedrop({
            
@@ -43,18 +43,18 @@
            },
            
            dragOver : function(event) {
-                              
-               $overlay.show();                              
+                
+                $container.addClass("drop");                              
            },
            
            dragLeave : function(event) {
                
-               $overlay.hide();               
+               $container.removeClass("drop");  
            },
            
            drop : function() {
                
-               $overlay.hide();               
+               $container.removeClass("drop");                
            },
            
            uploadStarted : function(i, file, len) {

@@ -31,6 +31,9 @@ header {
     height: pem(42);
     background: #FFF;
     border-bottom: 1px solid $bn-dark-green;
+    position: absolute;
+    width: 100%;
+    top:0;
     
     h1 {
         
@@ -55,22 +58,42 @@ header {
     }
 }
 
-        
-.bn-empty {
+#bn-container {
+    
+    position: absolute;
+    top: pem(43);
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+ 
+    .bn-empty {
 
-    font-size: pem(14);    
-    color: #9e9e9e;
-    font-weight: normal;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    
-    width: pem(209, 14);
-    padding-top: pem(160, 14);
-    margin: pem(42, 14) auto 0;
-    
-    background: url('../images/bn-dropzone.gif') no-repeat;
-    
+        font-size: pem(14);    
+        color: #9e9e9e;
+        font-weight: normal;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        
+        width: pem(209, 14);
+        padding-top: pem(160, 14);
+        margin: pem(42, 14) auto 0;
+        
+        background: url('../images/bn-dropzone.gif') no-repeat;
+        
     }
+    
+    &.drop {
+        
+        background: $bn-green;
+    
+        .bn-empty {
+            
+            color: $bn-green;
+            background-image: url('../images/bn-dropzone-hover.gif');
+        }
+    }
+    
+}
     
 /*
 #bn-drop {
