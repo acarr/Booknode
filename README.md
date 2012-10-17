@@ -3,12 +3,12 @@
 Read local eBooks in your browser.
 
 ## Getting Started
-Install the module with: `npm install booknode`
+Install Booknode using `npm install`
 
-Run the app from the booknode directory passing in the path to an ePub book:
+Then just run `app` and open http://localhost:3030
 
 ~~~
-node app path/to/abook/MyBook.epub
+node app
 ~~~
 
 ## Documentation
