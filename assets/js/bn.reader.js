@@ -11,7 +11,13 @@ $(document).ready(function(){
         $reader.height(height);
     };
     
+    bn.resizeImages = function() {
+        
+        var $head = $reader.contents().find("head");
+        $head.append('<style type="text/css"> img { max-width: 100%; } </style>');
+    };
+    
     $reader.load(bn.resizeFrame);
+    $reader.load(bn.resizeImages);
     bn.resizeFrame();
-
 }); 
