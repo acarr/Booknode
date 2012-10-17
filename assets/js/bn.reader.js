@@ -17,7 +17,7 @@ $(document).ready(function(){
         $head.append('<style type="text/css"> img { max-width: 100%; } </style>');
     };
     
-    $reader.load(bn.resizeFrame);
     $reader.load(bn.resizeImages);
+    $reader.load(bn.resizeFrame);
     bn.resizeFrame();
 }); 
