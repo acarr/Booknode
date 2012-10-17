@@ -513,6 +513,7 @@ header {
           #bn-container .bn-books-list li a img:hover {
             -webkit-transform: scale(1.03); }
         #bn-container .bn-books-list li a h3 {
+          font-weight: normal;
           font-size: 0.875em;
           line-height: 1.28571em;
           color: #333;
@@ -534,19 +535,24 @@ header {
     #bn-container #bn-toc ul {
       list-style: none;
       margin: 0.5em 0;
-      padding-left: 2em; }
+      padding-left: 1em; }
       #bn-container #bn-toc ul li {
-        margin-bottom: 0.4em; }
+        margin-bottom: 0.375em; }
         #bn-container #bn-toc ul li a {
           display: block;
-          font-size: 0.75em;
-          line-height: 1.4em;
+          font-size: 0.875em;
+          line-height: 1.42857em;
           text-decoration: none;
           color: #333; }
           #bn-container #bn-toc ul li a:hover {
-            text-decoration: underline; }
+            text-decoration: underline;
+            color: #333; }
     #bn-container #bn-toc > ul {
       padding: 1em; }
+      #bn-container #bn-toc > ul > li > a {
+        background: #e1e1e1; }
+      #bn-container #bn-toc > ul > li > ul > li > ul a {
+        color: #7d7d7d; }
   #bn-container #bn-reader {
     position: absolute;
     left: 21.0625em;
