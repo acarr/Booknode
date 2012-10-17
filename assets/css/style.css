@@ -454,40 +454,44 @@ header {
   bottom: 0;
   width: 100%;
   overflow: auto; }
-  #bn-container .bn-empty {
-    font-size: 0.875em;
-    color: #9e9e9e;
-    font-weight: normal;
+  #bn-container #bn-empty {
+    width: 13.0625em;
+    padding-top: 9.375em;
+    margin: 2.625em auto 0;
+    background: url("../images/bn-dropzone.gif") no-repeat top center;
     text-align: center;
-    -webkit-font-smoothing: antialiased;
-    width: 14.92857em;
-    padding-top: 11.42857em;
+    display: none; }
+    #bn-container #bn-empty p {
+      font-size: 0.875em;
+      color: #9e9e9e;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased; }
+  #bn-container #bn-progress {
+    width: 28.57143em;
     margin: 3em auto 0;
-    background: url("../images/bn-dropzone.gif") no-repeat; }
+    text-align: center;
+    display: none; }
+    #bn-container #bn-progress p {
+      color: #555;
+      font-size: 0.875em;
+      -webkit-font-smoothing: antialiased; }
+      #bn-container #bn-progress p span {
+        font-weight: bold; }
+  #bn-container.empty #bn-empty {
+    display: block; }
   #bn-container.drop {
     background: #7bba00; }
-    #bn-container.drop .bn-empty {
-      color: #7bba00;
+    #bn-container.drop #bn-empty {
+      display: block;
       background-image: url("../images/bn-dropzone-hover.gif"); }
+      #bn-container.drop #bn-empty p {
+        display: none; }
+  #bn-container.uploading #bn-progress {
+    display: block; }
+  #bn-container.uploading #bn-empty {
+    display: none; }
 
 /*
-#bn-drop {
-    
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 8px;
-    right: 8px;
-    background: #78BEF0;
-    border: 3px solid #254870;
-    border-radius: 6px;
-    opacity: 0.5;
-    z-index: -1;
-    
-    display: none;
-        
-    }
-
 .bn-books-list {
     
     list-style: none;

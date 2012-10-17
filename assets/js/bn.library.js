@@ -4,7 +4,9 @@
     $(document).ready(function(){
         
         var $body = $('body'),
-            $container = $('#bn-container');
+            $container = $('#bn-container'),
+            $uploading = $('#bn-progress'),
+            $progress = $('progress', $uploading);
         
         $body.filedrop({
            
@@ -57,35 +59,43 @@
                $container.removeClass("drop");                
            },
            
-           uploadStarted : function(i, file, len) {
+           beforeEach : function(file) {
                
-               console.log("started", arguments);
+               // Update progress filename
+               $('span', $uploading).text(file.name);
+               $progress.removeAttr('value');
+               
+               $container.addClass("uploading");
+               console.log("beforeEach", arguments);
            },
            
+           beforeSend : function(file, i, done) {
+               
+               console.log("beforeSend", arguments);
+               done();
+           },
+           
+           uploadStarted : function(i, file, len) {
+               
+               $progress.val(0);
+               console.log("started", arguments);
+           },
+  
+           progressUpdated : function(i, file, progress) {
+               
+               $progress.val(progress);
+               console.log("progress", arguments);
+           },
+  
            uploadFinished : function(i, file, response, time) {
                
                console.log("finished", arguments);
            },
            
-           progressUpdated : function(i, file, progress) {
-               
-               console.log("progress", arguments);
-           },
-           
-           beforeEach : function(file) {
-               
-               console.log(file);
-           },
-           
-           beforeSend : function(file, i, done) {
-               
-               console.log(file, i, done);
-               
-               done();
-           },
-           
            afterAll : function() {
                
+               $container.removeClass("uploading");
+               $progress.removeAttr('value');
                console.log("after", arguments);
            }
         });

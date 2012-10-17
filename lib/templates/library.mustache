@@ -6,7 +6,7 @@
         <h1>Booknode</h1>
     </header>
     
-    <div id="bn-container">
+    <div id="bn-container" {{^books}}class="empty"{{/books}}>
     
         <ul class="bn-books-list clearfix">
             {{#books}}
@@ -18,10 +18,15 @@
                     </a>
     		{{/books}}
         </ul>
+
+        <div id="bn-empty">
+            <p>Drag ePub files here to read.</p>
+        </div>
         
-        {{^books}}
-            <h2 class="bn-empty">Drag ePub files here to read.</h2>
-        {{/books}}    
+        <div id="bn-progress">
+            <p>Adding <span>Book.epub</span> to Booknode</p>
+            <progress max="100"></progress>
+        </div>  
 
     </div>
         
