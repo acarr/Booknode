@@ -1,0 +1,26 @@
+
+@mixin border-radius( $radius: 2px ) {
+	
+	@include prefix( border-radius, $radius);
+
+	}
+	
+@mixin prefix( $property, $value ) {
+	
+	-webkit-#{$property}: 	$value;
+	-khtml-#{$property}: 	$value;
+	-moz-#{$property}: 		$value;
+	-o-#{$property}: 		$value;
+	-ms-#{$property}: 		$value;
+	#{$property}: 			$value;
+	
+	}
+
+$baseFontSize: 16;
+
+@function pem($pxval, $base: $baseFontSize) {
+
+	@return #{$pxval / $base}em;
+
+	}
+	
